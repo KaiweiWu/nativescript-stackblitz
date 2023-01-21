@@ -1,6 +1,7 @@
 <ActionBar title="My App"> </ActionBar>
 
 <GridLayout>
+  <button text="Sign In" [nsRouterLink]="['../signin']"></button>
   <ListView [items]="items">
     <ng-template let-item="item">
       <StackLayout [nsRouterLink]="['/item', item.id]">

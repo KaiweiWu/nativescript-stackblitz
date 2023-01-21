@@ -1,0 +1,17 @@
+<ActionBar title="Sign In"></ActionBar>
+
+<FlexboxLayout flexDirection="column">
+  <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+    <label>
+      Email:
+      <input type="email" formControlName="email" />
+    </label>
+    <br />
+    <label>
+      Password:
+      <input type="password" formControlName="password" />
+    </label>
+    <br />
+    <button [disabled]="signInForm.invalid">Sign In</button>
+  </form>
+</FlexboxLayout>
